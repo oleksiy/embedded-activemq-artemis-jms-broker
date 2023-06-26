@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class JmsConsumer {
 
-    Logger log = LoggerFactory.getLogger(JmsConsumer.class);
+    private final Logger log = LoggerFactory.getLogger(JmsConsumer.class);
 
     @JmsListener(destination = "${spring.jms.template.default-destination}")
     public void receive(String message) {
