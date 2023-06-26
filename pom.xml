@@ -12,7 +12,15 @@
 	<artifactId>embedded-activemq-artemis-jms-broker</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>embedded-activemq-artemis-jms-broker</name>
-	<description>demo project for spring boot</description>
+	<description>demo project for spring boot and artemis jms embedded server</description>
+	<repositories>
+		<repository>
+			<id>apache-activemq</id>
+			<name>Apache ActiveMQ Repository</name>
+			<url>https://repository.apache.org/content/groups/public/</url>
+		</repository>
+		<!-- Other repositories -->
+	</repositories>
 	<properties>
 		<java.version>17</java.version>
 	</properties>
@@ -25,12 +33,18 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
-
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+		<!-- Now adding stuff here -->
+		<dependency>
+			<groupId>org.apache.activemq</groupId>
+			<artifactId>artemis-jms-server</artifactId>
+			<version>2.28.0</version>
+		</dependency>
+
 	</dependencies>
 
 	<build>
@@ -41,5 +55,7 @@
 			</plugin>
 		</plugins>
 	</build>
+
+
 
 </project>
