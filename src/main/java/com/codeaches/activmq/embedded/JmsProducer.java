@@ -20,4 +20,10 @@ public class JmsProducer {
         jmsTemplate.convertAndSend(message);
         log.info("Sent message='{}'", message);
     }
+
+    //alternative send method which creates a topic if it doesn't exist
+    public void send(String destination, String message) {
+        jmsTemplate.convertAndSend(destination, message);
+        log.info("Sent message='{}' to queue='{}'", message, destination);
+    }
 }
