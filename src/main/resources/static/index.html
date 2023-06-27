@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ActiveMQ Test</title>
+    //include activemq javascript library
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/activemq/1.2.0/activemq.js"></script>
+    <script src="https://cdn.jsdelivr.net/stomp.js/2.3.3/stomp.min.js"></script>
+    <script src="queueSubscriber.js"></script>
+</head>
+<body>
+<h1>ActiveMQ Test</h1>
+<form action="/send" method="post">
+    <input type="text" name="message" placeholder="Message">
+    <button type="submit">Send</button>
+</form>
+<p id="receiver"></p>
+</body>
+</html>
