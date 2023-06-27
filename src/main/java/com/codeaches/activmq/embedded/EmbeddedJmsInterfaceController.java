@@ -13,8 +13,13 @@ public class EmbeddedJmsInterfaceController {
     }
 
     @PostMapping("/send")
-    public void sendDataToJms(@RequestParam String message) {
+    public void sendDataToJms(@RequestBody String message) {
         jmsProducer.send(message);
+    }
+
+    @PostMapping("/send/{queueName}")
+    public void sendDataToJms(@PathVariable() String queueName, @RequestBody String message) {
+        jmsProducer.send(queueName, message);
     }
 
     @GetMapping("/create/{queueName}")
