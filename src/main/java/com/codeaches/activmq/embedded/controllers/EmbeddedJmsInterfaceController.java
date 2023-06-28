@@ -1,5 +1,7 @@
-package com.codeaches.activmq.embedded;
+package com.codeaches.activmq.embedded.controllers;
 
+import com.codeaches.activmq.embedded.DynamicJmsConsumer;
+import com.codeaches.activmq.embedded.JmsProducer;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
